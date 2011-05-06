@@ -1,0 +1,14 @@
+= Introducción =
+
+El presente trabajo tiene como finalidad la implementación de un sistema via web, de venta de libros por delivery online.
+
+
+= Servicios =
+
+1. Registro de Ventas():
+
+2. Control de Stock:
+
+3. Transacción Bancaria:
+
+4. Control de Recursos:
