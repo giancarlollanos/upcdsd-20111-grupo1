@@ -1,11 +1,9 @@
-#summary One-sentence summary of this page.
-
 = Servicios =
 
-1. Gestión de Ventas (WebService): Orquestar la transacción del proceso de venta. 
-2. Control de Stock (WebService): Consultar la disponibilidad del libro. 
-3. Transacción Bancaria (Colas): Verificar el descargo del deposito por el pago del servicio. 
-4. Control de Recursos (WebService): Asignar al personal de reparto la entrega del producto según su dispobilidad. 
+* Gestión de Ventas (WebService): Orquestar la transacción del proceso de venta.
+* Control de Stock (WebService): Consultar la disponibilidad del libro. 
+* Transacción Bancaria (Colas): Verificar el descargo del deposito por el pago del servicio. 
+* Control de Recursos (WebService): Asignar al personal de reparto la entrega del producto según su dispobilidad. 
 
 
 == Gestión de Ventas ==
