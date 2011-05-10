@@ -5,10 +5,10 @@ El presente trabajo tiene como finalidad la implementación de un sistema via we
 
 == Servicios ==
 
-=== Gestión de Ventas(WebService): ===
+=== Registro de Ventas(WebService): ===
 Orquestar la transacción del proceso de venta.
 
-==== Operación: ====
+==== Operación Registro: ====
 Registrar Delivery.
 
 ==== Parametros: =====
@@ -45,7 +45,7 @@ Un estado: actualizo o no.
 === Transacción Bancaria(Colas): ===
 Verificar el descargo del deposito por el pago del servicio.
 
-==== Operación: ====
+==== Operación Validar: ====
 Validación de Tarjeta.
 
 ==== Parametros: =====
