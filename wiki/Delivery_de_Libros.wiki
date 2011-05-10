@@ -1,3 +1,22 @@
 = Introducción =
 
 El presente trabajo tiene como finalidad la implementación de un sistema via web, de venta de libros por delivery online.
+
+
+== Servicios ==
+
+=== Gestión de Ventas(WebService): ===
+Orquestar la transacción del proceso de venta.
+
+==== Operación: ====
+bool Login(BeanUsuario Usuario);
+
+
+=== Control de Stock(WebService): ===
+Consultar la disponibilidad del libro.
+
+=== Transacción Bancaria(Colas): ===
+Verificar el descargo del deposito por el pago del servicio.
+
+== Control de Recursos(WebService): ===
+Asignar al personal de reparto la entrega del producto según su dispobilidad.
