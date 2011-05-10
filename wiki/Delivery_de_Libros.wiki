@@ -9,14 +9,10 @@ El presente trabajo tiene como finalidad la implementación de un sistema via we
 Orquestar la transacción del proceso de venta.
 
 ==== Operación: ====
-Validación de Usuario.
+Registrar Delivery.
 
 ==== Parametros: =====
-Número de Tarjeta.
-Titular.
-Fecha de Expiración.
-Monto.
-PIN.
+Objeto Bean de tipo pedido
 
 ==== Retorno: =====
 Un estado: transacción satisfactoria o no.
@@ -52,10 +48,14 @@ Verificar el descargo del deposito por el pago del servicio.
 Validación de Tarjeta.
 
 ==== Parametros: =====
+Número de Tarjeta.
+Titular.
+Fecha de Expiración.
+Monto.
+PIN.
 
 ==== Retorno: =====
-
-
+Un estado: transacción satisfactoria o no.
 
 
 == Control de Recursos(WebService): ===
