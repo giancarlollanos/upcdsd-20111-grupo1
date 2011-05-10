@@ -19,8 +19,7 @@ Validación de Usuario.
 === Gestión de Stock(WebService): ===
 Consultar la disponibilidad del libro.
 
-==== Operación: ====
-Consultar Stock.
+==== Operación : ==== Consultar Stock.
 
 ==== Parametros: =====
 Codigo de Libro.
