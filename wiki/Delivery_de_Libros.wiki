@@ -5,7 +5,8 @@ El presente trabajo tiene como finalidad la implementación de un sistema via we
 
 == Servicios ==
 
-1. Gestión de Ventas(WebService): Orquestar la transacción del proceso de venta.
+=== Gestión de Ventas(WebService): ===
+Orquestar la transacción del proceso de venta.
 
 2. Control de Stock(WebService): Consultar la disponibilidad del libro.
 
