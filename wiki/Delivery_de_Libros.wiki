@@ -13,7 +13,7 @@ Registrar Delivery.
 
 ==== Parametros: =====
 Objeto Bean de tipo pedido.
-(CodigoPedido, CodigoLibro, Cantidad, FechaEnvio,HoraEnvia, CodigoPersonal, Monto)
+(CodigoPedido,CodigoLibro, Cantidad, FechaEnvio,HoraEnvia, CodigoPersonal, Monto)
 
 ==== Retorno: =====
 Un estado: transacción satisfactoria o no.
