@@ -1,7 +1,15 @@
 = *Introducción* =
 
-En los últimos años la demanda de libros de lectura y consulta ha ido crecido rápidamente, favoreciendo las ventas realizadas por las `Librería G1`, que de igual manera, fue creciendo conforme la demanda del mercado interno. 
+En los últimos años la demanda de libros de lectura y consulta ha ido crecido rápidamente, favoreciendo las ventas realizadas por las *Librerías G1*, que de igual manera, fue creciendo conforme la demanda del mercado interno. 
 
-En gran medida este beneficio permitió la apertura de nuevas tiendas en diversos puntos estratégicos de la capital con la finalidad de brindar una mayor cercanía con sus clientes y, a su vez, la posibilidad de poder captar más clientes potenciales.
+En gran medida este beneficio permitió la apertura de nuevas tiendas en diversos puntos estratégicos de la capital con la finalidad de brindar una mayor cercanía con sus clientes y, a su vez, la posibilidad de captar más clientes potenciales.
 
-Los servicios que hasta el momento se prestan son
+Actualmente, los servicios que presta la librería son los siguientes:
+
+  * Sala de lectura
+  * Cliente frecuente
+  * Revistas y folletos
+  * Promociones y ofertas
+  * Catálogo en línea
+
+Si bien, el nivel de aceptación de las *Librerías G1* es alto, y acorde a las constantes innovaciones que periódicamente son realizadas por la empresa, se está evaluando la creación de un nuevo servicio: *Delivery de libros*.
