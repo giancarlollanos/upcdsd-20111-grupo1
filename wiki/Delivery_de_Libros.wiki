@@ -9,11 +9,25 @@ El presente trabajo tiene como finalidad la implementación de un sistema via we
 Orquestar la transacción del proceso de venta.
 
 ==== Operación: ====
-bool Login(BeanUsuario Usuario);
+Validación de Usuario.
+
+==== Parametros: =====
+
+==== Retorno: =====
 
 
-=== Control de Stock(WebService): ===
+=== Gestión de Stock(WebService): ===
 Consultar la disponibilidad del libro.
+
+==== Operación: ====
+consultar Stock.
+
+==== Parametros: =====
+
+
+==== Retorno: =====
+
+
 
 === Transacción Bancaria(Colas): ===
 Verificar el descargo del deposito por el pago del servicio.
