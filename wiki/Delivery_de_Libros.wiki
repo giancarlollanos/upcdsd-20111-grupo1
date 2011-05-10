@@ -12,8 +12,14 @@ Orquestar la transacción del proceso de venta.
 Validación de Usuario.
 
 ==== Parametros: =====
+Número de Tarjeta.
+Titular.
+Fecha de Expiración.
+Monto.
+PIN.
 
 ==== Retorno: =====
+Un estado: transacción satisfactoria o no.
 
 
 === Gestión de Stock(WebService): ===
@@ -41,6 +47,14 @@ Un estado: actualizo o no.
 
 === Transacción Bancaria(Colas): ===
 Verificar el descargo del deposito por el pago del servicio.
+
+==== Operación: ====
+Validación de Tarjeta.
+
+==== Parametros: =====
+
+==== Retorno: =====
+
 
 
 
