@@ -12,7 +12,8 @@ Orquestar la transacción del proceso de venta.
 Registrar Delivery.
 
 ==== Parametros: =====
-Objeto Bean de tipo pedido
+Objeto Bean de tipo pedido.
+(CodigoPedido, CodigoLibro, Cantidad, FechaEnvio,HoraEnvia, CodigoPersonal, Monto)
 
 ==== Retorno: =====
 Un estado: transacción satisfactoria o no.
