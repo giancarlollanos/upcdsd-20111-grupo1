@@ -20,13 +20,13 @@ Validación de Usuario.
 Consultar la disponibilidad del libro.
 
 ==== Operación: ====
-consultar Stock.
+Consultar Stock.
 
 ==== Parametros: =====
-
+Codigo de Libro.
 
 ==== Retorno: =====
-
+Cantidad de Productos en Stock.
 
 
 === Transacción Bancaria(Colas): ===
