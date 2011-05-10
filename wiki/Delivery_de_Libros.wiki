@@ -48,10 +48,12 @@ Verificar el descargo del deposito por el pago del servicio.
 Asignar al personal de reparto la entrega del producto según su dispobilidad.
 
 ==== Operación Consultar: ==== 
-Consultar Stock.
+Consultar Disponibilidad.
 
 ==== Parametros: =====
-Codigo de Libro.
+Codigo de Repartidor.
+Fecha.
+Hora.
 
 ==== Retorno: =====
-Cantidad de Productos en Stock.
+Un estado: disponible o no.
