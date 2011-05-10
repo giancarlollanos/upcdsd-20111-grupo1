@@ -6,7 +6,7 @@ El presente trabajo tiene como finalidad la implementación de un sistema via we
 == Servicios ==
 
 === Gestión de Ventas(WebService): ===
-# Orquestar la transacción del proceso de venta.
+Orquestar la transacción del proceso de venta.
 
 ==== Operación: ====
 Validación de Usuario.
@@ -19,13 +19,26 @@ Validación de Usuario.
 === Gestión de Stock(WebService): ===
 Consultar la disponibilidad del libro.
 
-==== Operación : ==== Consultar Stock.
+==== Operación Consultar: ==== 
+Consultar Stock.
 
 ==== Parametros: =====
 Codigo de Libro.
 
 ==== Retorno: =====
 Cantidad de Productos en Stock.
+
+==== Operación Actualizar: ==== 
+Actualizar Stock.
+
+==== Parametros: =====
+Codigo de Libro.
+Cantidad.
+
+==== Retorno: =====
+Un estado: actualizo o no.
+
+
 
 
 === Transacción Bancaria(Colas): ===
