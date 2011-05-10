@@ -12,4 +12,6 @@ Actualmente, los servicios que presta la librería son los siguientes:
   * Promociones y ofertas
   * Catálogo en línea
 
-Si bien, el nivel de aceptación de las *Librerías G1* es alto, y acorde a las constantes innovaciones que periódicamente son realizadas por la empresa, se está evaluando la creación de un nuevo servicio: *Delivery de libros*.
+Si bien, el nivel de aceptación de las *Librerías G1* es alto, las constantes innovaciones y mejoras que son realizadas por la empresa en beneficio del cliente han permitido identificar el siguiente servicio: *Delivery de libros*.
+
+Este nuevo servicio
