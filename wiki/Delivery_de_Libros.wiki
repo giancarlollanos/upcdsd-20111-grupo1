@@ -6,7 +6,7 @@ El presente trabajo tiene como finalidad la implementación de un sistema via we
 == Servicios ==
 
 === Gestión de Ventas(WebService): ===
-Orquestar la transacción del proceso de venta.
+* Orquestar la transacción del proceso de venta.
 
 ==== Operación: ====
 Validación de Usuario.
