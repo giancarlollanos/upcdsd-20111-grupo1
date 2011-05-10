@@ -17,4 +17,8 @@ Si bien, el nivel de aceptación de las *Librerías G1* es alto, las constantes 
 Este nuevo servicio tendrá la funcionalidad de un sistema vía "WEB". 
 El servicio permitirá:
 
-  * selección de los libros (en base al "catálogo en línea")
+  * Seleccionar los libros del "catálogo en línea"
+  * Verificar el "stock" de cada libro
+  * Validar los datos de la tarjeta de crédito
+  * Generar el cargo de la compra
+  * Asignar un recurso (repartidor) para la entrega
