@@ -14,7 +14,7 @@ Actualmente, los servicios que brinda la empresa son los siguientes:
 
 Si bien, el nivel de aceptación de las *Librerías G1* es alto, las constantes innovaciones y mejoras que son realizadas por la empresa en beneficio del cliente han permitido identificar el siguiente servicio: *Delivery de libros*.
 
-Este nuevo servicio tendrá como finalidad la implementación de un sistema vía "WEB". El servicio permitirá:
+Este nuevo servicio tendrá la funcionalidad de un sistema vía "WEB". 
+El servicio permitirá:
 
   * selección de los libros (en base al "catálogo en línea")
-
