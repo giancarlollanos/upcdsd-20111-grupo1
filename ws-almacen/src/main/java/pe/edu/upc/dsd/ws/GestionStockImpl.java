@@ -5,7 +5,7 @@ import javax.jws.WebService;
 @WebService(endpointInterface = "pe.edu.upc.dsd.ws.GestionStock")
 public class GestionStockImpl implements GestionStock {
 	
-	public int cantidadLibros(int codigo) {
+	public int consultarStock(int codigo) {
 		int cantidad=0;
 		
 		
