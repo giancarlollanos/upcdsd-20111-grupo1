@@ -6,7 +6,7 @@ import javax.jws.WebService;
 public interface GestionStock {
 	
 	
-	public int cantidadLibros(int codigo);
+	public int consultarStock(int codigo);
 	
 	
 }
