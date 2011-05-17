@@ -5,7 +5,12 @@
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
 	<bean id="helloWorld" class="pe.edu.upc.dsd.ws.HelloWorldImpl" />
+	<bean id="disponibilidad" class="pe.edu.upc.dsd.ws.DisponibilidadImpl" />
+
 	<jaxws:endpoint id="helloWorldEndpoint" implementor="#helloWorld"
 		address="/HelloWorld" />
+	<jaxws:endpoint id="disponibilidadEndpoint" implementor="#disponibilidad"
+		address="/Disponibilidad" />
 </beans>  
