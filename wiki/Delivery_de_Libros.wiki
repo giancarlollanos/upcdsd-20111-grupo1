@@ -14,7 +14,6 @@ Controlar los usuarios que acceden al sistema.
 Consultar Usuario.
 
 ==== Parametros: =====
-Objeto Bean de tipo usuario.
 Codigo de Usuario.
 
 ==== Retorno: =====
