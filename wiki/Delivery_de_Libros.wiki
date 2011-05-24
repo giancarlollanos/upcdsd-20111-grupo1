@@ -9,25 +9,47 @@ El presente trabajo tiene como finalidad la implementación de un sistema via we
 === Gestión de Usuarios(WebService): ===
 Controlar los usuarios que acceden al sistema.
 
-==== Operación Registro: ====
-Registrar Usuario.
-
-==== Parametros: =====
-Objeto Bean de tipo usuario.
-(CodigoUsuario, Login, Password, Nombre, Apellido, )
-
-==== Retorno: =====
-Un estado: transacción satisfactoria o no.
 
 ==== Operación Consultar: ====
 Consultar Usuario.
 
 ==== Parametros: =====
 Objeto Bean de tipo usuario.
-(CodigoUsuario, Login, Password, Nombre, Apellido, )
+Codigo de Usuario.
 
 ==== Retorno: =====
 Objeto Bean de tipo usuario.
+
+
+==== Operación Vaidar: ====
+Validar al Usuario.
+
+==== Parametros: =====
+Login y Password.
+
+==== Retorno: =====
+Objeto Bean de tipo usuario.
+
+
+==== Operación Registro: ====
+Registrar Usuario.
+
+==== Parametros: =====
+Objeto Bean de tipo usuario.
+(CodigoUsuario, Login, Password, Nombre, Apellido)
+
+==== Retorno: =====
+Un estado: transacción satisfactoria o no.
+
+==== Operación Actualiación: ====
+Actualizar Usuario.
+
+==== Parametros: =====
+Objeto Bean de tipo usuario.
+(CodigoUsuario, Login, Password, Nombre, Apellido)
+
+==== Retorno: =====
+Un estado: transacción satisfactoria o no.
 
 
 === Registro de Ventas(WebService): ===
