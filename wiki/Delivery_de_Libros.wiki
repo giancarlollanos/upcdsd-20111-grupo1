@@ -3,7 +3,32 @@
 El presente trabajo tiene como finalidad la implementación de un sistema via web, de venta de libros por delivery online.
 
 
+
 == Servicios ==
+
+=== Gestión de Usuarios(WebService): ===
+Controlar los usuarios que acceden al sistema.
+
+==== Operación Registro: ====
+Registrar Usuario.
+
+==== Parametros: =====
+Objeto Bean de tipo usuario.
+(CodigoUsuario, Login, Password, Nombre, Apellido, )
+
+==== Retorno: =====
+Un estado: transacción satisfactoria o no.
+
+==== Operación Consultar: ====
+Consultar Usuario.
+
+==== Parametros: =====
+Objeto Bean de tipo usuario.
+(CodigoUsuario, Login, Password, Nombre, Apellido, )
+
+==== Retorno: =====
+Objeto Bean de tipo usuario.
+
 
 === Registro de Ventas(WebService): ===
 Orquestar la transacción del proceso de venta.
@@ -12,8 +37,7 @@ Orquestar la transacción del proceso de venta.
 Registrar Delivery.
 
 ==== Parametros: =====
-Objeto Bean de tipo pedido.
-(CodigoPedido, CodigoLibro, Cantidad, FechaEnvio,HoraEnvia, CodigoPersonal, Monto)
+Codigo de Pedido.
 
 ==== Retorno: =====
 Un estado: transacción satisfactoria o no.
