@@ -1,6 +1,7 @@
 package pe.edu.upc.dsd.rs;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -53,27 +54,36 @@ public class DisponibilidadService {
 	@GET
 	@Path("/listar/{tiporecurso}")
 	@Produces("text/plain")
-	public ArrayList listarRecursos(@PathParam("tiporecurso") int tipoRecurso) {
-		ArrayList<String> lista = new ArrayList<String>();
+	public String listarRecursos(@PathParam("tiporecurso") int tipoRecurso) {
+		String lista="";
 		switch (tipoRecurso)
 		{
 		case 0: 
 			//Recurso - Despachador
-			lista.add("RD001");
-			lista.add("RD002");
-			lista.add("RD003");
-			lista.add("RD004");
-			return lista;
+			lista="<br>RD001<br>RD002<br>RD003<br>RD004";
+			/*
+			rec=new Recurso();rec.setCodigo("RD001");lista.add(rec);
+			rec=new Recurso();rec.setCodigo("RD002");lista.add(rec);
+			rec=new Recurso();rec.setCodigo("RD003");lista.add(rec);
+			rec=new Recurso();rec.setCodigo("RD004");lista.add(rec);
+			*/	
+			break;
 		case 1:
 			//Recurso - Movilidad
-			lista.add("RM001");
-			lista.add("RM002");
-			return lista;
+			lista="RM001,RM002";
+			/*
+			rec=new Recurso();rec.setCodigo("RM001");lista.add(rec);
+			rec=new Recurso();rec.setCodigo("RM002");lista.add(rec);
+				*/		
+			break;			
 		default:
 			//Recurso - Libre
-			lista.add("RL001");
-			return lista;
+			lista="RL001";
+			//rec=new Recurso();rec.setCodigo("RL001");lista.add(rec);
+			break;
 		}
+		return lista;
 	}
+
 
 }
