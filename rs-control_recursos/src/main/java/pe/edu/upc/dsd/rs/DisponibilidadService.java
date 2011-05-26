@@ -60,26 +60,15 @@ public class DisponibilidadService {
 		{
 		case 0: 
 			//Recurso - Despachador
-			lista="<br>RD001<br>RD002<br>RD003<br>RD004";
-			/*
-			rec=new Recurso();rec.setCodigo("RD001");lista.add(rec);
-			rec=new Recurso();rec.setCodigo("RD002");lista.add(rec);
-			rec=new Recurso();rec.setCodigo("RD003");lista.add(rec);
-			rec=new Recurso();rec.setCodigo("RD004");lista.add(rec);
-			*/	
+			lista="RD001,RD002,RD003,RD004";
 			break;
 		case 1:
 			//Recurso - Movilidad
 			lista="RM001,RM002";
-			/*
-			rec=new Recurso();rec.setCodigo("RM001");lista.add(rec);
-			rec=new Recurso();rec.setCodigo("RM002");lista.add(rec);
-				*/		
 			break;			
 		default:
 			//Recurso - Libre
 			lista="RL001";
-			//rec=new Recurso();rec.setCodigo("RL001");lista.add(rec);
 			break;
 		}
 		return lista;
