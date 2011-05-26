@@ -15,36 +15,36 @@ import org.junit.Test;
 public class RestClientTestUsuarios {
 
 	@Test
-	public void asignar() throws Exception {
+	public void registrar() throws Exception {
 		HttpClient httpclient = new DefaultHttpClient();
 		HttpGet httpget = new HttpGet(
-				"http://localhost:8080/rs-control_recursos/rest/Disponibilidad/asignar/RD001/PD001");
+				"http://localhost:8080/rs-gestion_usuarios/rest/Usuario/registrar/codigo/nombre/idlogin/password/direccion/telefono");
 		HttpResponse response = httpclient.execute(httpget);
 		HttpEntity entity = response.getEntity();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent()));
-		Assert.assertEquals("Asignado", reader.readLine());
+		Assert.assertEquals("Registro de Usuario Satisfactorio", reader.readLine());
 	}
 
-	@Test
-	public void consultar() throws Exception {
+/*	@Test
+	public void actualizar() throws Exception {
 		HttpClient httpclient = new DefaultHttpClient();
 		HttpGet httpget = new HttpGet(
-				"http://localhost:8080/rs-control_recursos/rest/Disponibilidad/consultar/RD001/fecha/hora");
+				"http://localhost:8080/rs-gestion_usuarios/rest/Usuario/actualizar/codigo/nombre/idlogin/password/direccion/telefono");
 		HttpResponse response = httpclient.execute(httpget);
 		HttpEntity entity = response.getEntity();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent()));
-		Assert.assertEquals("Disponible", reader.readLine());
-	}
-
+		Assert.assertEquals("Actualizacion de Usuario Satisfactoria", reader.readLine());
+	}*/
+	
 	@Test
-	public void listar() throws Exception {
+	public void login() throws Exception {
 		HttpClient httpclient = new DefaultHttpClient();
 		HttpGet httpget = new HttpGet(
-				"http://localhost:8080/rs-control_recursos/rest/Disponibilidad/listar/0");
+				"http://localhost:8080/rs-gestion_usuarios/rest/Usuario/login/rhumire/1234");
 		HttpResponse response = httpclient.execute(httpget);
 		HttpEntity entity = response.getEntity();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent()));
-		Assert.assertEquals("RD001,RD002,RD003,RD004", reader.readLine());
+		Assert.assertEquals("Login Satisfactorio", reader.readLine());
 	}
 
 }
