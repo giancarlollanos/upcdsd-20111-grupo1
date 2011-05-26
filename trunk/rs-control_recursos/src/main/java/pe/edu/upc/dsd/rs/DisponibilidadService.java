@@ -15,7 +15,16 @@ public class DisponibilidadService {
 	@Path("/asignar/{codigorecurso}/{codigopedido}")
 	@Produces("text/plain")
 	public String asignarRecurso(@PathParam("codigorecurso") String codigorecurso, @PathParam("codigopedido") String codigopedido) {
-		return "Asignado";
+		String msj="";
+		if (codigorecurso.substring(0, 2).equals("RD")) {
+			if (codigorecurso.equals("RD001")) msj="Asignado";
+			if (codigorecurso.equals("RD002")) msj="Asignado";
+			if (codigorecurso.equals("RD003")) msj="Asignado";
+			if (codigorecurso.equals("RD004")) msj="No Asignado";
+		} else {
+			msj="Recurso " + codigorecurso + " no encontrado";		
+		}
+		return msj;
 	}
 	
 	@GET
