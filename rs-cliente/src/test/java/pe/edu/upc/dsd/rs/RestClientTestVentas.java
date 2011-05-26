@@ -18,33 +18,12 @@ public class RestClientTestVentas {
 	public void asignar() throws Exception {
 		HttpClient httpclient = new DefaultHttpClient();
 		HttpGet httpget = new HttpGet(
-				"http://localhost:8080/rs-control_recursos/rest/Disponibilidad/asignar/RD001/PD001");
+				"http://localhost:8080/rs-registro_ventas/rest/Ventas/registrar/L001/U001/1");
 		HttpResponse response = httpclient.execute(httpget);
 		HttpEntity entity = response.getEntity();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent()));
-		Assert.assertEquals("Asignado", reader.readLine());
+		Assert.assertEquals("Registro Correcto", reader.readLine());
 	}
 
-	@Test
-	public void consultar() throws Exception {
-		HttpClient httpclient = new DefaultHttpClient();
-		HttpGet httpget = new HttpGet(
-				"http://localhost:8080/rs-control_recursos/rest/Disponibilidad/consultar/RD001/fecha/hora");
-		HttpResponse response = httpclient.execute(httpget);
-		HttpEntity entity = response.getEntity();
-		BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent()));
-		Assert.assertEquals("Disponible", reader.readLine());
-	}
-
-	@Test
-	public void listar() throws Exception {
-		HttpClient httpclient = new DefaultHttpClient();
-		HttpGet httpget = new HttpGet(
-				"http://localhost:8080/rs-control_recursos/rest/Disponibilidad/listar/0");
-		HttpResponse response = httpclient.execute(httpget);
-		HttpEntity entity = response.getEntity();
-		BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent()));
-		Assert.assertEquals("RD001,RD002,RD003,RD004", reader.readLine());
-	}
 
 }
