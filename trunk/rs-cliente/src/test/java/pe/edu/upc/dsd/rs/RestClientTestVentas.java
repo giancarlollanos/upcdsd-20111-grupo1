@@ -15,7 +15,7 @@ import org.junit.Test;
 public class RestClientTestVentas {
 
 	@Test
-	public void asignar() throws Exception {
+	public void registrar() throws Exception {
 		HttpClient httpclient = new DefaultHttpClient();
 		HttpGet httpget = new HttpGet(
 				"http://localhost:8080/rs-registro_ventas/rest/Ventas/registrar/L001/U001/1");

@@ -15,36 +15,26 @@ import org.junit.Test;
 public class RestClientTestStock {
 
 	@Test
-	public void asignar() throws Exception {
-		HttpClient httpclient = new DefaultHttpClient();
-		HttpGet httpget = new HttpGet(
-				"http://localhost:8080/rs-control_recursos/rest/Disponibilidad/asignar/RD001/PD001");
-		HttpResponse response = httpclient.execute(httpget);
-		HttpEntity entity = response.getEntity();
-		BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent()));
-		Assert.assertEquals("Asignado", reader.readLine());
-	}
-
-	@Test
 	public void consultar() throws Exception {
 		HttpClient httpclient = new DefaultHttpClient();
 		HttpGet httpget = new HttpGet(
-				"http://localhost:8080/rs-control_recursos/rest/Disponibilidad/consultar/RD001/fecha/hora");
+				"http://localhost:8080/rs-gestion_stock/rest/Stock/consultar/L001");
 		HttpResponse response = httpclient.execute(httpget);
 		HttpEntity entity = response.getEntity();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent()));
-		Assert.assertEquals("Disponible", reader.readLine());
+		Assert.assertEquals("25", reader.readLine());
 	}
 
 	@Test
-	public void listar() throws Exception {
+	public void actualizar() throws Exception {
 		HttpClient httpclient = new DefaultHttpClient();
 		HttpGet httpget = new HttpGet(
-				"http://localhost:8080/rs-control_recursos/rest/Disponibilidad/listar/0");
+				"http://localhost:8080/rs-gestion_stock/rest/Stock/actualizar/L001/5");
 		HttpResponse response = httpclient.execute(httpget);
 		HttpEntity entity = response.getEntity();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(entity.getContent()));
-		Assert.assertEquals("RD001,RD002,RD003,RD004", reader.readLine());
+		Assert.assertEquals("Registro Actualizado", reader.readLine());
 	}
+
 
 }
