@@ -1,8 +1,5 @@
 package pe.edu.upc.dsd.rs;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -12,37 +9,27 @@ import javax.ws.rs.Produces;
 public class StockService {
 
 	@GET
-	@Path("/asignar/{codigorecurso}/{codigopedido}")
+	@Path("/consultar/{codigolibro}")
 	@Produces("text/plain")
-	public String asignarRecurso(@PathParam("codigorecurso") String codigorecurso, @PathParam("codigopedido") String codigopedido) {
-		return "Asignado";
-	}
-	
-	@GET
-	@Path("/consultar/{codigorecurso}/{fecha}/{hora}")
-	@Produces("text/plain")
-	public String consultarRecurso(@PathParam("codigorecurso") String codigorecurso, @PathParam("fecha") String fecha, @PathParam("hora") String hora) {
+	public String consultarStock(@PathParam("codigolibro") String codigolibro) {
 		String msj="";
-		if (codigorecurso.equals("RD001")) {
-			msj="Disponible";
+	
+		if (codigolibro.equals("L001")) {
+			msj="25";
 		} else { 
-			if (codigorecurso.equals("RD002")) {
-				msj="Disponible";
+			if (codigolibro.equals("L002")) {
+				msj="19";
 			} else {
-				if (codigorecurso.equals("RD003")) {
-					msj="Disponible"; 
+				if (codigolibro.equals("L003")) {
+					msj="45"; 
 				} else {
-					if (codigorecurso.equals("RD004")) {
-						msj="No Disponible"; 
+					if (codigolibro.equals("L004")) {
+						msj="11"; 
 					} else {
-						if (codigorecurso.equals("RM001")) {
-							msj="No Disponible"; 
+						if (codigolibro.equals("L005")) {
+							msj="0"; 
 						} else {
-							if (codigorecurso.equals("RM002")) {
-								msj="Disponible"; 
-							} else {
-								msj="Recurso " + codigorecurso + " no Encontrado";
-							}
+							msj="Libro " + codigolibro + " no Encontrado";
 						}
 					}
 				}
@@ -52,26 +39,19 @@ public class StockService {
 	}
 
 	@GET
-	@Path("/listar/{tiporecurso}")
+	@Path("/actualizar/{codigolibro}/{cantidad}")
 	@Produces("text/plain")
-	public String listarRecursos(@PathParam("tiporecurso") int tipoRecurso) {
-		String lista="";
-		switch (tipoRecurso)
+	public String listarRecursos(@PathParam("codigolibro") String codigolibro,@PathParam("cantidad") int cantidad) {
+		String msj="";
+		if(!codigolibro.equals("") && cantidad!=0)
 		{
-		case 0: 
-			//Recurso - Despachador
-			lista="RD001,RD002,RD003,RD004";
-			break;
-		case 1:
-			//Recurso - Movilidad
-			lista="RM001,RM002";
-			break;			
-		default:
-			//Recurso - Libre
-			lista="RL001";
-			break;
+			msj="Registro Actualizado";			
 		}
-		return lista;
+		else
+		{			
+			msj="Error de Actualizacion";
+		}
+		return msj;
 	}
 
 
