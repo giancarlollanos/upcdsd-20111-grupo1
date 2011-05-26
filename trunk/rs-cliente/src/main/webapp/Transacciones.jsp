@@ -5,21 +5,9 @@
 
 <script>
 	$(document).ready(function() {
-		$("#boton1").click(function() {
+				$("#boton2").click(function() {
 			$.ajax({
-				url: 'http://localhost:8080/rs-control_recursos/rest/Disponibilidad/asignar/'+$("#asignar_codigorecurso").val()+'/'+$("#codigopedido").val(),
-				type: 'GET',
-				success: function(data) {
-					$("#span1").html(data);
-				},
-				error: function(data) {
-					alert("Error");
-				}
-			});
-		});
-		$("#boton2").click(function() {
-			$.ajax({
-				url: 'http://localhost:8080/rs-control_recursos/rest/Disponibilidad/consultar/'+$("#consultar_codigorecurso").val()+'/'+$("#fecha").val()+'/'+$("#hora").val(),
+				url: 'http://localhost:8080/rs-transaccion_bancaria/rest/Transaccion/validar/'+$("#validar_tarjeta").val()+'/'+$("#titular").val()+'/'+$("#pin").val(),
 				type: 'GET',
 				success: function(data) {
 					$("#span2").html(data);
@@ -28,42 +16,15 @@
 					alert("Error");
 				}
 			});
-		});
-		$("#boton3").click(function() {
-			$.ajax({
-				url: 'http://localhost:8080/rs-control_recursos/rest/Disponibilidad/listar/'+$("#tiporecurso").val(),
-				type: 'GET',
-				success: function(data) {
-					
-					arreglo=data.split(',');
-					resultado="<table border=1>";
-					resultado+="<tr>";
-					resultado+="<th>Recursos Disponibles</th>";
-					resultado+="</tr>";
-					for(i=0;i< arreglo.length; i++)
-						{
-							resultado+="<tr>";
-							resultado+="<td>";
-							resultado+=arreglo[i];
-							resultado+="<td>";
-							resultado+="</tr>";
-					}
-					resultado+="</table>";
-					
-					$("#span3").html(resultado);
-				},
-				error: function(data) {
-					alert("Error");
-				}
+		});				
 			});
-		});
-	 });
-	
-	
-	
+		
+	 
+		
 </script>
 
 <script language="javascript">
+/*
 function tabla(data)
 {
 	alert(data);
@@ -83,65 +44,37 @@ function tabla(data)
 	alert(resultado);
 	return resultado;
 }
-
+*/
 </script>
 
 
 </head>
 <body>
 
-<h1>Nodo: Control de Recursos</h1>
-<h2>Servicio: Disponibilidad</h2>
+<h1>Nodo: Transaccion Bancaria</h1>
+<h2>Servicio: Transaccion</h2>
 <hr width=100% align="left">
 
 <br />
-<h3>Proceso: Asignar Recurso</h3>
-<table cellspacing="0" cellpadding="0" border="0">
-	<tr>
-		<td>Codigo de Recurso</td>
-		<td><input id="asignar_codigorecurso" type="text" width=20px /></td>
-	</tr>
-	<tr>
-		<td>Codigo de Pedido</td>
-		<td><input id="codigopedido" type="text" width=20px /></td>
-	</tr>
-</table>
-<input type="button" id="boton1" value="Asignar" width=10px />
-<span id="span1"></span>
 
-<br />
-<hr width=50% align="left">
-<br />
-<h3>Proceso: Consultar Recurso</h3>
+<h3>Proceso: Consultar Tarjeta</h3>
 <table cellspacing="0" cellpadding="0" border="0">
 	<tr>
-		<td>Codigo de Recurso</td>
-		<td><input id="consultar_codigorecurso" type="text" width=20px /></td>
+		<td>Numero de tarjeta</td>
+		<td><input id="validar_tarjeta" type="text" width=20px /></td>
 	</tr>
 	<tr>
-		<td>Fecha</td>
-		<td><input id="fecha" type="text" width=20px /></td>
+		<td>Titular</td>
+		<td><input id="titular" type="text" width=20px /></td>
 	</tr>
 	<tr>
-		<td>Hora</td>
-		<td><input id="hora" type="text" width=20px /></td>
+		<td>PIN</td>
+		<td><input id="pin" type="text" width=20px /></td>
 	</tr>
 </table>
-<input type="button" id="boton2" value="Consultar" width=10px />
+<input type="button" id="boton2" value="Validar" width=10px />
 <span id="span2"></span>
 
-<br />
-<hr width=50% align="left">
-<br />
-<h3>Proceso: Listar Recursos</h3>
-<table cellspacing="0" cellpadding="0" border="0">
-	<tr>
-		<td>Tipo de Recurso</td>
-		<td><input id="tiporecurso" type="text" width=20px /></td>
-	</tr>
-</table>
-<input type="button" id="boton3" value="Listar" width=10px />
-<span id="span3"></span>
 <br />
 
 </body>
