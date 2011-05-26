@@ -5,7 +5,8 @@
 <body>
 
 <center>
-<h1>Delivery de Libros</h1>
+
+<br><img src="Baner.jpg" WIDTH="440" HEIGHT="100" BORDER="0" />
 </center>
 
 <pre>
