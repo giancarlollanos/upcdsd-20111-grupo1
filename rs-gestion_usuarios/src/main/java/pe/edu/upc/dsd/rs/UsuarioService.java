@@ -19,25 +19,37 @@ public class UsuarioService {
 			@PathParam("direccion") String direccion,
 			@PathParam("telefono") String telefono) {
 		String msj = "";
-		if (codigo == "") {
+		if (codigo.equals("")) {
 			msj = "Completar codigo";
-			if (nombre == "") {
+		}
+		else
+		{ 
+			if (nombre.equals("")) {
 				msj = "Completar nombre";
-				if (idlogin == "") {
+			}
+		else 
+		{
+			if (idlogin.equals("")) {
 					msj = "Completar idlogin";
-					if (password == "") {
+			}
+		else 
+		{
+			if (password.equals("")) {
 						msj = "Completar password";
-						if (direccion == "") {
+			}
+		else 
+		{
+			if (direccion.equals("")) {
 							msj = "Completar direccion";
-							if (telefono == "") {
+			}
+		else if (telefono.equals("")) {
 								msj = "Completar telefono";
 							} else {
 								msj = "Registro de Usuario Satisfactorio";
 							}
-						}
-					}
-				}
 			}
+			}
+		}
 		}
 		return msj;
 	}
