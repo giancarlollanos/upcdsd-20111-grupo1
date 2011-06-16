@@ -9,11 +9,12 @@
 <br><img src="Baner.jpg" WIDTH="440" HEIGHT="100" BORDER="0" />
 </center>
 
+<a href="prj_login.jsp">Proyecto Cliente</a>
+
 <pre>
 
 Listado de Nodos:
 
-	
 	<a href="Usuarios.jsp">Gestion de Usuarios</a>
 	
 	<a href="Ventas.jsp">Registro de Ventas</a>
