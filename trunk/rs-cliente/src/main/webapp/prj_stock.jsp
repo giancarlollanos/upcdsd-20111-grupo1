@@ -1,10 +1,44 @@
 <html>
 <head>
 
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$("#boton1").click(function() {
+			$.ajax({
+				url: 'http://localhost:8080/rs-gestion_stock/rest/Stock/consultar/'+$("#consultar_codigolibro").val(),
+				type: 'GET',
+				success: function(data) {
+					$("#span1").html(data);
+				},
+				error: function(data) {
+					alert("Error");
+				}
+			});
+		});
+		$("#boton2").click(function() {
+			$.ajax({
+				url: 'http://localhost:8080/rs-gestion_stock/rest/Stock/actualizar/'+$("#actualizar_codigolibro").val()+'/'+$("#cantidad").val(),
+				type: 'GET',
+				success: function(data) {
+					$("#span2").html(data);
+				},
+				error: function(data) {
+					alert("Error");
+				}
+			});
+		});
+		
+	 });
+	
+</script>
+
 </head>
 <body>
 
-<br />
+<br/><h3>Usuario:<%String strLogin = request.getParameter("login");out.print(" "+strLogin);%></h3>
+
 <h3>Stock</h3>
 <table cellspacing="0" cellpadding="0" border="0">
 	<tr>

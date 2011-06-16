@@ -12,7 +12,7 @@
 				success: function(data) {
 					//$("#span1").html(data);
 					if (data=="Login Satisfactorio"){
-						document.location.href='prj_stock.jsp';
+						document.location.href='prj_stock.jsp?login='+$("#login").val();
 					}else{
 						alert("Login/Password incorrecto o no registrado");
 						document.location.href='prj_registro.jsp';
