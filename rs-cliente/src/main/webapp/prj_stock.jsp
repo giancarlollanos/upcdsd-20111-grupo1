@@ -7,29 +7,25 @@
 	$(document).ready(function() {
 		$("#boton1").click(function() {
 			$.ajax({
-				url: 'http://localhost:8080/rs-gestion_stock/rest/Stock/consultar/'+$("#consultar_codigolibro").val(),
+				url: 'http://localhost:8080/rs-gestion_stock/rest/Stock/consultar/'+$("#cod").val(),
 				type: 'GET',
 				success: function(data) {
-					$("#span1").html(data);
+					if(data!="" && data!="Libro "+$("#cod").val()+" no Encontrado"){
+						if (parseInt(data)>0){
+							//aca se ejecutaria la llamada al segundo webservice del nodo gestion-stock
+							document.location.href='prj_transaccion.jsp?login='+strLogin+'&codlib='+$("#cod").val();
+						} else {
+							alert("No disponible");
+						}
+					} else {
+						alert("No disponible");
+					}
 				},
 				error: function(data) {
-					alert("Error");
+					alert("No disponible");
 				}
 			});
 		});
-		$("#boton2").click(function() {
-			$.ajax({
-				url: 'http://localhost:8080/rs-gestion_stock/rest/Stock/actualizar/'+$("#actualizar_codigolibro").val()+'/'+$("#cantidad").val(),
-				type: 'GET',
-				success: function(data) {
-					$("#span2").html(data);
-				},
-				error: function(data) {
-					alert("Error");
-				}
-			});
-		});
-		
 	 });
 	
 </script>
@@ -42,19 +38,24 @@
 <h3>Stock</h3>
 <table cellspacing="0" cellpadding="0" border="0">
 	<tr>
-		<td>Libro A</td>
-		<td><input id="cantidadA" type="text" /></td>
-		<td><input type="checkbox" name="checkA" value=""></td>
+		<td><input type="radio" id="cod" name="codigo" value="L001"></td>
+		<td>L001 - Libro 01</td>
 	</tr>
 	<tr>
-		<td>Libro B</td>
-		<td><input id="cantidadB" type="text" /></td>
-		<td><input type="checkbox" name="checkB" value=""></td>
+		<td><input type="radio" id="cod" name="codigo" value="L002"></td>
+		<td>L002 - Libro 02</td>
 	</tr>
 	<tr>
-		<td>Libro C</td>
-		<td><input id="cantidadC" type="text" /></td>
-		<td><input type="checkbox" name="checkC" value=""></td>
+		<td><input type="radio" id="cod" name="codigo" value="L003"></td>
+		<td>L003 - Libro 03</td>
+	</tr>
+	<tr>
+		<td><input type="radio" id="cod" name="codigo" value="L004"></td>
+		<td>L004 - Libro 04</td>
+	</tr>
+	<tr>
+		<td><input type="radio" id="cod" name="codigo" value="L005"></td>
+		<td>L005 - Libro 05</td>
 	</tr>
 </table>
 <br />
