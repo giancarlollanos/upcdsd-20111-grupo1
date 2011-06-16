@@ -7,7 +7,7 @@
 	$(document).ready(function() {
 				$("#boton2").click(function() {
 			$.ajax({
-				url: 'http://localhost:8080/rs-transaccion_bancaria/rest/Transaccion/validar/'+$("#validar_tarjeta").val()+'/'+$("#titular").val()+'/'+$("#pin").val(),
+				url: 'http://localhost:8080/rs-transaccion_bancaria/rest/Transaccion/validar/'+$("#validar_tarjeta").val()+'/'+$("#titular").val()+'/'+$("#pin").val()+'/'+$("#monto").val(),
 				type: 'GET',
 				success: function(data) {
 					$("#span2").html(data);
@@ -70,6 +70,10 @@ function tabla(data)
 	<tr>
 		<td>PIN</td>
 		<td><input id="pin" type="text" width=20px /></td>
+	</tr>
+	<tr>
+		<td>Monto</td>
+		<td><input id="monto" type="text" width=20px /></td>
 	</tr>
 </table>
 <input type="button" id="boton2" value="Validar" width=10px />
