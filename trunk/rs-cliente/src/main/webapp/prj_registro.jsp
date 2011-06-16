@@ -1,6 +1,30 @@
 <html>
 <head>
 
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$("#boton1").click(function() {
+			$.ajax({
+				url: 'http://localhost:8080/rs-gestion_usuarios/rest/Usuario/registrar/'+$("#codigo").val()+'/'+$("#nombre").val()+'/'+$("#idlogin").val()+'/'+$("#password").val()+'/'+$("#direccion").val()+'/'+$("#telefono").val(),
+				type: 'GET',
+				success: function(data) {
+					//$("#span1").html(data);
+					if (data=="Registro de Usuario Satisfactorio" || data==""){
+						document.location.href='prj_stock.jsp';
+					} else {
+						alert(data);
+					}
+				},
+				error: function(data) {
+					alert("Error");
+				}
+			});
+		});
+	 });
+	
+</script>
 </head>
 <body>
 
