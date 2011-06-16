@@ -4,7 +4,8 @@
 </head>
 <body>
 
-<br />
+<br/><h3>Usuario:<%String strLogin = request.getParameter("login");out.print(" "+strLogin);%></h3>
+
 <h3>Transacción</h3>
 <table cellspacing="0" cellpadding="0" border="0">
 	<tr>
