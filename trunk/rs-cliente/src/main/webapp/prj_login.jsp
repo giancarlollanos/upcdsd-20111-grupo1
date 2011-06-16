@@ -1,7 +1,38 @@
 <html>
 <head>
 
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$("#boton1").click(function() {
+			$.ajax({
+				url: 'http://localhost:8080/rs-gestion_usuarios/rest/Usuario/login/'+$("#login").val()+'/'+$("#password").val(),
+				type: 'GET',
+				success: function(data) {
+					//$("#span1").html(data);
+					if (data=="Login Satisfactorio"){
+						document.location.href='prj_stock.jsp';
+					}else{
+						alert("Login/Password incorrecto o no registrado");
+						document.location.href='prj_registro.jsp';
+					}
+						
+				},
+				error: function(data) {
+					//$("#span1").html("Login/Password incorrecto o no registrado");
+					document.location.href='prj_registro.jsp';
+				}
+			});
+		});
+	 });
+		
+</script>
+
+
 </head>
+
+
 <body>
 
 <br />
