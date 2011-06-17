@@ -93,7 +93,7 @@ public class UsuarioService {
 		   (@PathParam("idlogin") String idlogin,
 			@PathParam("password") String password) {
 		String msj = "";
-		if (idlogin.equals("rhumire") && password.equals("1234")) {
+		if (idlogin.equals("admin") && password.equals("1234")) {
 			msj = "Login Satisfactorio";
 		} else {
 			msj = "Usuario Invalido";
