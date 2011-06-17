@@ -1,0 +1,395 @@
+﻿/* DEFAULTS*/
+body {
+    background-attachment: scroll;
+    background-color: #252525;
+    background-image: url("../images/background.jpg");
+    background-position: left top;
+    background-repeat: repeat;/*repeat-x;*/
+	font-family: "Georgia, Trebuchet MS,Arial, Helvetica, sans-serif";
+	font-size: 11pt;
+}
+
+.containerlogin {
+position:relative;
+z-index:1;
+width:390px;
+padding:20px;
+margin:0 auto;
+}
+.containerlogin:after {
+content:"";
+display:block;
+clear:both;
+visibility:hidden;
+height:0;
+font-size:0;
+}
+/* Shared styles */
+.drop-shadow {
+position:relative;
+float:left;
+width:100%;
+padding:1em;
+margin:2em 10px 4em;
+background:#3a3024;
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.drop-shadow:before,
+.drop-shadow:after {
+content:"";
+position:absolute;
+z-index:-2;
+}
+.drop-shadow p {
+font-size:12px;
+font-weight:bold;
+}
+/* Raised shadow - no pseudo-elements needed */
+.raised {
+-webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.bevanSign { 
+	font-family: 'Bevan', arial, serif; 
+	color: #d2d196;
+	font-size: 18pt;
+	text-align:center;
+}
+.bevanLabel { 
+	font-family: 'Bevan', arial, serif; 
+	color: #9a6226;
+	font-size: 12pt;
+	text-align:center;
+}
+
+#lblMensaje{ 
+	font-family: 'Bevan', arial, serif; 
+	color: #9a6226;
+	font-size: 12pt;
+	text-align:center;
+}
+
+#btnIniciar{
+    background: none repeat scroll 0 0 #d2d196;
+    border: 1px solid #3a3024;
+    box-shadow: 0 0 1px #FFFFFF inset;
+    color: #3a3024;
+    cursor: pointer;
+    font-weight: 900;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 0px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    width: 180px;
+	font-family: 'Bevan', arial, serif; 
+	font-size: 12pt;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+	background: url("../images/banner.png") repeat-x scroll center top transparent;
+}
+
+#title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    clear: both;
+    height: 87px;
+    width: auto;
+}
+
+#title h1
+{
+	font-family: 'Bevan', arial, serif; 
+	color: #d2d196;
+	font-size: 14pt;
+	width: 700px;
+	padding-top:15px;
+}
+
+
+.loginDisplay
+{
+    font-size: 10pt;
+    display: block;
+    text-align: right;
+    padding: 30px;
+    color: #d2d196;
+}
+
+.loginDisplay a:link
+{
+    color: #9a6226;
+}
+
+.loginDisplay a:visited
+{
+    color: #9a6226;
+}
+
+.loginDisplay a:hover
+{
+    color: #9a6226;
+}
+
+
+
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{    
+    width: 1120px; /* 960px;*/
+    background-color: #f8f9e5;
+    margin: 20px auto 0px auto;
+}
+
+
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 720px;
+    vertical-align:top;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    display:inline-table;
+    background-color: #563544;
+    width:100%;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #563544;
+    border: 1px #563544 solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #563544;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #563544;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+
+
+
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+.titulo
+{
+    font-style:oblique;
+    font-size: 2em;
+}
+.boton
+{
+    background-color:#713823;
+    color:White;
+}
