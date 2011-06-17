@@ -65,7 +65,7 @@ public class UsuarioService {
 			@PathParam("direccion") String direccion,
 			@PathParam("telefono") String telefono) {
 		String msj = "";
-			if (nombre == "") {
+			if (nombre == " ") {
 				msj = "Completar nombre";
 				if (idlogin == "") {
 					msj = "Completar idlogin";
